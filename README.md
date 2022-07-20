@@ -1,2 +1,3 @@
-# Aalzheimer-s-disease-Classifier
+# Alzheimers-disease-Classifier
+
 Aalzheimer's disease Classifier
