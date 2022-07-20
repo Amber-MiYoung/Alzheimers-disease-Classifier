@@ -42,4 +42,4 @@ def getPrediction(filename):
 
     return verbose_name[classes_x[0]]
 
-test_prediction =getPrediction('mild.jpg')
+#test_prediction =getPrediction('mild.jpg')
