@@ -31,24 +31,29 @@ def index():
     return render_template('index.html')
 
 #Add Post method to the decorator to allow for form submission. 
+        
 @app.route('/', methods=['POST'])
 def submit_file():
     if request.method == 'POST':
         if 'file' not in request.files:
             flash('No file part')
             return redirect(request.url)
-        file = request.files['file']
-        if file.filename == '':
+        img = request.files['file']
+        if img.filename == '':
             flash('No file selected for uploading')
             return redirect(request.url)
-        if file:
-            filename = secure_filename(file.filename)  # Use this werkzeug method to secure filename. 
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
-            label = getPrediction(filename)
+        if img:
+            img_path = "static/images/" + img.filename
+            img.save(img_path)
+
+
+            label = getPrediction(img_path)
             flash(label)
-            full_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+
+            full_filename = os.path.join(app.config['UPLOAD_FOLDER'], img.filename)
             flash(full_filename)
-            return redirect('/')
+
+            return redirect('/')     
 
 
 if __name__ == "__main__":
