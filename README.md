@@ -3,7 +3,7 @@
 Alzheimer's Disease (A.D.) Classifier Web App
 
 
-For the final individual Work-Integrated Project, I implemented an Alzheimer's Disease Classifier web app. 
+For an individual Work-Integrated Project, I implemented an Alzheimer's Disease Classifier web app. 
 The web app works by reading uploaded brain MRI images and predicting at what stage of the disease the patient might be. The model was trained to achieve a prediction accuracy of 98%. The entire process followed the Full Stack Data Science Systems flow from the beginning to the final deployment on Cloud. The app is currently accessible at https://adclassifier.herokuapp.com/. For testing, you will first need to download some scan images from here - MRI-scan-images (MRI-images - Google Drive).
 
 
